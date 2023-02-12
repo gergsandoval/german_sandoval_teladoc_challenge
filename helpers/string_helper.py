@@ -1,6 +1,6 @@
 from distutils.util import strtobool
 
-class Helper:
+class StringHelper:
     
     @staticmethod
     def string_to_bool(string):

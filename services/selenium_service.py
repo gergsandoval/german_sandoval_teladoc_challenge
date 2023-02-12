@@ -26,15 +26,15 @@ class SeleniumService:
     def visit_page(self, page):
         self.context.driver.get(page)
 
-    def get_rows(self, by):
+    def get_table_rows(self, by):
         table = self.context.driver.find_element(by[0], by[1])
         return table.find_elements(By.CSS_SELECTOR, "tbody > tr")
     
     def is_checked(self, tr, index):
-        return self.get_td(tr, index).find_element(By.TAG_NAME, "input").is_selected()
+        return self.get_td_element(tr, index).find_element(By.TAG_NAME, "input").is_selected()
     
     def get_text_inside_row(self, row, index):
-        return self.get_td(row, index).text
+        return self.get_td_element(row, index).text
 
-    def get_td(self, tr, index):
+    def get_td_element(self, tr, index):
         return tr.find_elements(By.TAG_NAME, "td")[index]

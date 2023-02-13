@@ -1,5 +1,5 @@
 # Prerequisites
-1. Install Python 3.8
+1. Install Python 3.8+
 
 # How to execute the tests
 1. Clone this repository
